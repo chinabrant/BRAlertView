@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BRAlertView_Example' do
+  pod 'BRAlertView', :path => '../'
+
+  target 'BRAlertView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -9,28 +9,30 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+![效果图](./screenshort.png)
+
 ```
 [BRTextAlertView showMessage:@"Tap outside can't dismiss" buttonTitles:@[@"Cancel"] configrationBlock:^BRTextConfigration * _Nullable{
-                BRTextConfigration *configration = [BRTextConfigration new];
-                configration.tapOutsideDismiss = NO;
-                return configration;
-            } actionBlock:^(int index) {
-                
-            }];
+    BRTextConfigration *configration = [BRTextConfigration new];
+    configration.tapOutsideDismiss = NO;
+    return configration;
+} actionBlock:^(int index) {
+
+}];
 
 [BRTextAlertView showMessage:@"Tap outside dismiss" buttonTitles:@[@"Cancel", @"Confirm"] configrationBlock:^BRTextConfigration * _Nullable{
-                BRTextConfigration *configration = [BRTextConfigration new];
-                NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"This is an AttributedString,Configration contain attributedString,the message parameter will invalid!"];
-                [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(4, 16)];
-                NSRange range = [[attrString string] rangeOfString:@"invalid"];
-                [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:17] range:range];
-                [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
-                configration.attributedString = attrString;
+    BRTextConfigration *configration = [BRTextConfigration new];
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"This is an AttributedString,Configration contain attributedString,the message parameter will invalid!"];
+    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(4, 16)];
+    NSRange range = [[attrString string] rangeOfString:@"invalid"];
+    [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:17] range:range];
+    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
+    configration.attributedString = attrString;
                 
-                return configration;
-            } actionBlock:^(int index) {
+    return configration;
+} actionBlock:^(int index) {
                 
-            }];
+}];
 ```
 
 ## Requirements

@@ -1,5 +1,5 @@
 PODS:
-  - BRAlertView (0.1.0)
+  - BRAlertView (0.0.1)
 
 DEPENDENCIES:
   - BRAlertView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BRAlertView: cb1689c9b34de1ea44126497e5e7212c3784de6e
+  BRAlertView: 504d3f50a001d53e361ece186a78d3cb3a04a022
 
 PODFILE CHECKSUM: 57d2f8edbd3d2e36606598888beaca335eed09cc
 

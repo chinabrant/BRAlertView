@@ -25,6 +25,7 @@
 		6154D5A21DC9A88E008BEB57 /* BRAlertBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D59C1DC9A88E008BEB57 /* BRAlertBaseView.m */; };
 		6154D5A31DC9A88E008BEB57 /* BRCloseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D59F1DC9A88E008BEB57 /* BRCloseView.m */; };
 		6154D5A41DC9A88E008BEB57 /* BRTextAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D5A11DC9A88E008BEB57 /* BRTextAlertView.m */; };
+		6154D5A71DC9BC36008BEB57 /* BRTextAlertTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D5A61DC9BC36008BEB57 /* BRTextAlertTableViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A8FDB0E4EED5C18B546366D6 /* Pods_BRAlertView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE1E04320FC94ED7282117F /* Pods_BRAlertView_Example.framework */; };
 		B72D14C61CCE2C267E42AFC3 /* Pods_BRAlertView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E830EC0C8B73DCAE2F0BCFE0 /* Pods_BRAlertView_Tests.framework */; };
@@ -74,6 +75,8 @@
 		6154D59F1DC9A88E008BEB57 /* BRCloseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCloseView.m; sourceTree = "<group>"; };
 		6154D5A01DC9A88E008BEB57 /* BRTextAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTextAlertView.h; sourceTree = "<group>"; };
 		6154D5A11DC9A88E008BEB57 /* BRTextAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTextAlertView.m; sourceTree = "<group>"; };
+		6154D5A51DC9BC36008BEB57 /* BRTextAlertTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTextAlertTableViewController.h; sourceTree = "<group>"; };
+		6154D5A61DC9BC36008BEB57 /* BRTextAlertTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTextAlertTableViewController.m; sourceTree = "<group>"; };
 		65500E09C726BA06F9455157 /* BRAlertView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BRAlertView.podspec; path = ../BRAlertView.podspec; sourceTree = "<group>"; };
 		6D5C8AEAA4BB05AD41E25795 /* Pods-BRAlertView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRAlertView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRAlertView_Tests/Pods-BRAlertView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				6003F5A6195388D20070C39A /* BRViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				6154D5A51DC9BC36008BEB57 /* BRTextAlertTableViewController.h */,
+				6154D5A61DC9BC36008BEB57 /* BRTextAlertTableViewController.m */,
 			);
 			name = "Example for BRAlertView";
 			path = BRAlertView;
@@ -444,6 +449,7 @@
 				6003F59E195388D20070C39A /* BRAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6154D5A71DC9BC36008BEB57 /* BRTextAlertTableViewController.m in Sources */,
 				6154D5A41DC9A88E008BEB57 /* BRTextAlertView.m in Sources */,
 				6154D5A31DC9A88E008BEB57 /* BRCloseView.m in Sources */,
 			);

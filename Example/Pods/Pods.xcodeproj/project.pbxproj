@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004FB541F273DA1E66B28FD278E7D26E /* BRAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5C7D4419E702E697DA78A64E54540A /* BRAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0149141C3C5C41E9A9B95448E7AACFB8 /* BRAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B87765F48144910462384C1FB59340 /* BRAlertView-dummy.m */; };
 		0675B7F468D5D884392F65466D6CAC34 /* Pods-BRAlertView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F63DF6865400612131477EE01F13C /* Pods-BRAlertView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EAF12DBDDA1DD7DDF34677D56CBF1D3 /* BRTextAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE260B0A9A5B7E313234F621BBFC7DF0 /* BRTextAlertView.m */; };
 		2A1239366E8FA4A4D1E81428A6B8249D /* Pods-BRAlertView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ED2D7DBB8A6937ABAD5C76402C0948 /* Pods-BRAlertView_Example-dummy.m */; };
+		316AACD07009CE80FBD49C8C6E8CA0FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		518BB4B55F7C242E3979208C505B969F /* BRTextAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4E202F284E83BA65E2A8BD7FC06D7E /* BRTextAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F5B6C05A482D165452BBED88C6C1025 /* BRAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5C7D4419E702E697DA78A64E54540A /* BRAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780A18BC5053427BCD99998FC3355BCF /* BRAlertBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1844B08F4E173D1431A4AB0DAAC450A4 /* BRAlertBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86276383CA2B0FEC1FB7537E2C712851 /* BRAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B87765F48144910462384C1FB59340 /* BRAlertView-dummy.m */; };
 		8F1E8E1EADA471040827319D90EEB49C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		981EEF1CA308E3F58383221EB31EE543 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		926FCD7FDE58F1B99BB9C2B953DEEB14 /* BRAlertBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9C4E033CF354E34B8B848C90327AD2 /* BRAlertBaseView.m */; };
 		AA323130C2D94E10B88012A1B719EEE3 /* Pods-BRAlertView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9BA7787B432F4E5DB98E577AE57F17 /* Pods-BRAlertView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC3084D64DBDC062B45704A08A1E4BF7 /* Pods-BRAlertView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B20085E61B6A06BDE1B96F13505811D3 /* Pods-BRAlertView_Tests-dummy.m */; };
-		DF2EFC0E961B2BDD8C1031BAAC618E76 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC5FD7F70AAC5E760F108CBD0D44023 /* ReplaceMe.m */; };
+		AFFA3B6D4340C3C12D877E5100F80956 /* BRCloseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1351A65F15C5C2D2D413A35601A85 /* BRCloseView.m */; };
+		B4D2019A7A2EACFE5F156BD273C9CBFE /* BRAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1432300DF3EC55AFF67955FC950A038C /* BRAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D694670BC3EE12FFFDFC156F78716A16 /* BRCloseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F8EB90B6366F2E3B5B77FA9C547DFC5 /* BRCloseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E503E2E9BD44486D5AA203255172403E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +30,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3F65E26F727B879A34D57A955BEC916E;
+			remoteGlobalIDString = E976801DA8EFA533CB5C75C6B26A6D6E;
 			remoteInfo = BRAlertView;
 		};
 /* End PBXContainerItemProxy section */
@@ -33,6 +39,8 @@
 		09612449F2077EA8DDDD7A45AC5E19D9 /* Pods-BRAlertView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BRAlertView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0D9DB1DBB90F52F488725ACACB20B138 /* Pods-BRAlertView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BRAlertView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		13729FB7CE08FD6448B7CA7BB578A455 /* Pods-BRAlertView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BRAlertView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		1432300DF3EC55AFF67955FC950A038C /* BRAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BRAlertView.h; sourceTree = "<group>"; };
+		1844B08F4E173D1431A4AB0DAAC450A4 /* BRAlertBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BRAlertBaseView.h; sourceTree = "<group>"; };
 		2067D682824B7F35D834CC9E5F337BFD /* BRAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BRAlertView.modulemap; sourceTree = "<group>"; };
 		22609D164315A838D9ED0F7177CE9EA6 /* Pods-BRAlertView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BRAlertView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2409BF88F087EF857918559DA03DD9D5 /* Pods-BRAlertView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BRAlertView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -40,13 +48,17 @@
 		2782BE135FC178330E050704B61EF0E9 /* Pods-BRAlertView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BRAlertView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		34F40A58F4E1E101CF88DB9505142176 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CD7C17156AFD7A5D104EEEC00B56281 /* Pods-BRAlertView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BRAlertView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		4DC1351A65F15C5C2D2D413A35601A85 /* BRCloseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BRCloseView.m; sourceTree = "<group>"; };
 		57B87765F48144910462384C1FB59340 /* BRAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BRAlertView-dummy.m"; sourceTree = "<group>"; };
 		662E2D05BE164FEBBB288DB92CB685D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		733BEE81A85579A66F9ADC666C24C0F3 /* BRAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BRAlertView.xcconfig; sourceTree = "<group>"; };
 		77FBF9CFE918545F2AF06B5814CA2329 /* Pods-BRAlertView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BRAlertView_Example-resources.sh"; sourceTree = "<group>"; };
+		7F8EB90B6366F2E3B5B77FA9C547DFC5 /* BRCloseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BRCloseView.h; sourceTree = "<group>"; };
 		8A5C7D4419E702E697DA78A64E54540A /* BRAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BRAlertView-umbrella.h"; sourceTree = "<group>"; };
+		8D9C4E033CF354E34B8B848C90327AD2 /* BRAlertBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BRAlertBaseView.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F2DA2A1D92FC6206548D0C7594080B4 /* Pods-BRAlertView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BRAlertView_Example.modulemap"; sourceTree = "<group>"; };
+		AA4E202F284E83BA65E2A8BD7FC06D7E /* BRTextAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BRTextAlertView.h; sourceTree = "<group>"; };
 		AB919078724175867AA060418F318158 /* BRAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BRAlertView.framework; path = BRAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9BA7787B432F4E5DB98E577AE57F17 /* Pods-BRAlertView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BRAlertView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B20085E61B6A06BDE1B96F13505811D3 /* Pods-BRAlertView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BRAlertView_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -56,23 +68,15 @@
 		CF0298C44F30652FA8EA63B893D0EBA3 /* Pods_BRAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BRAlertView_Tests.framework; path = "Pods-BRAlertView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5ED2D7DBB8A6937ABAD5C76402C0948 /* Pods-BRAlertView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BRAlertView_Example-dummy.m"; sourceTree = "<group>"; };
 		DA7327F2FDFAB620E4C7C5E3B8EEC84F /* Pods-BRAlertView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BRAlertView_Tests.modulemap"; sourceTree = "<group>"; };
+		DE260B0A9A5B7E313234F621BBFC7DF0 /* BRTextAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BRTextAlertView.m; sourceTree = "<group>"; };
 		DFF2A1D5A0B85859600ECBB5B564093E /* Pods-BRAlertView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BRAlertView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E8C8308B8A6350246DDD107CEA9C7095 /* Pods-BRAlertView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BRAlertView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		EA696E50C3CC32B0A6D2E1BFC5D6A336 /* Pods-BRAlertView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BRAlertView_Tests-resources.sh"; sourceTree = "<group>"; };
-		EEC5FD7F70AAC5E760F108CBD0D44023 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		F37435D43E6DBA1E7E17FB72A1F865A0 /* Pods-BRAlertView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BRAlertView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FC594BAEA2D1DE2F2445E4A49699F745 /* BRAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BRAlertView-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5C07C98EDEFCDCA982F4E69AEDACD3A6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				981EEF1CA308E3F58383221EB31EE543 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BBC00A492732CC5DAEE0E637E5DF137C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,9 +93,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F683662C39843CC06742F5CA0D78F2DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				316AACD07009CE80FBD49C8C6E8CA0FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA0B4F480DF835910A4FB8DC9248695 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1844B08F4E173D1431A4AB0DAAC450A4 /* BRAlertBaseView.h */,
+				8D9C4E033CF354E34B8B848C90327AD2 /* BRAlertBaseView.m */,
+				1432300DF3EC55AFF67955FC950A038C /* BRAlertView.h */,
+				7F8EB90B6366F2E3B5B77FA9C547DFC5 /* BRCloseView.h */,
+				4DC1351A65F15C5C2D2D413A35601A85 /* BRCloseView.m */,
+				AA4E202F284E83BA65E2A8BD7FC06D7E /* BRTextAlertView.h */,
+				DE260B0A9A5B7E313234F621BBFC7DF0 /* BRTextAlertView.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		53DCF4B018F551D6A96ABB03BCAA8F55 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,19 +141,10 @@
 			path = "Example/Pods/Target Support Files/BRAlertView";
 			sourceTree = "<group>";
 		};
-		5DDB26AA97177087CADD324FD9C2D27C /* BRAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				DCE02A786B1FFBE1FA92A45DCDC0EEBD /* Classes */,
-			);
-			name = BRAlertView;
-			path = BRAlertView;
-			sourceTree = "<group>";
-		};
 		5EA83F1531F17DD89AEE818802F75674 /* BRAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				5DDB26AA97177087CADD324FD9C2D27C /* BRAlertView */,
+				BD468B29510EA3A450DE81F4AC23F32E /* BRAlertView */,
 				5D335D50AEA32B43B4357101416E0F9E /* Support Files */,
 			);
 			name = BRAlertView;
@@ -188,6 +206,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD468B29510EA3A450DE81F4AC23F32E /* BRAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				1FA0B4F480DF835910A4FB8DC9248695 /* Classes */,
+			);
+			name = BRAlertView;
+			path = BRAlertView;
+			sourceTree = "<group>";
+		};
 		CF3B9A5F9BC4915FA600ADC35691961D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,15 +222,6 @@
 				DEB5BFE06F18E38EFCD19FEFED316BB3 /* Pods-BRAlertView_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DCE02A786B1FFBE1FA92A45DCDC0EEBD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EEC5FD7F70AAC5E760F108CBD0D44023 /* ReplaceMe.m */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		DEB5BFE06F18E38EFCD19FEFED316BB3 /* Pods-BRAlertView_Tests */ = {
@@ -227,6 +245,18 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1057E6983F17E886E26D90947CE177B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780A18BC5053427BCD99998FC3355BCF /* BRAlertBaseView.h in Headers */,
+				5F5B6C05A482D165452BBED88C6C1025 /* BRAlertView-umbrella.h in Headers */,
+				B4D2019A7A2EACFE5F156BD273C9CBFE /* BRAlertView.h in Headers */,
+				D694670BC3EE12FFFDFC156F78716A16 /* BRCloseView.h in Headers */,
+				518BB4B55F7C242E3979208C505B969F /* BRTextAlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1776C9331DBCB8E499D2A775F26E94BF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,14 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0675B7F468D5D884392F65466D6CAC34 /* Pods-BRAlertView_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A373E44AAF7F6C77FE9A19FADE5CD177 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				004FB541F273DA1E66B28FD278E7D26E /* BRAlertView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,23 +293,6 @@
 			productReference = CF0298C44F30652FA8EA63B893D0EBA3 /* Pods_BRAlertView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3F65E26F727B879A34D57A955BEC916E /* BRAlertView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6EFDE60CFB4CDC69953AB6B28AAB8FFE /* Build configuration list for PBXNativeTarget "BRAlertView" */;
-			buildPhases = (
-				714269473B0EEDDC5AFD3FE2C38DEFFA /* Sources */,
-				5C07C98EDEFCDCA982F4E69AEDACD3A6 /* Frameworks */,
-				A373E44AAF7F6C77FE9A19FADE5CD177 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BRAlertView;
-			productName = BRAlertView;
-			productReference = AB919078724175867AA060418F318158 /* BRAlertView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		5D3ED5D00C66BDAF6FF0CB70B91E59C4 /* Pods-BRAlertView_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE5E6760FEEDF5F91CD7519F14841EB9 /* Build configuration list for PBXNativeTarget "Pods-BRAlertView_Example" */;
@@ -304,6 +309,23 @@
 			name = "Pods-BRAlertView_Example";
 			productName = "Pods-BRAlertView_Example";
 			productReference = B3707AC0D230FC098B2EE98AA216A8AE /* Pods_BRAlertView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E976801DA8EFA533CB5C75C6B26A6D6E /* BRAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742F11C0F208EF314B3293552E8B71AF /* Build configuration list for PBXNativeTarget "BRAlertView" */;
+			buildPhases = (
+				DC8988C5A8EB8EE2A85AA1762F3485E7 /* Sources */,
+				F683662C39843CC06742F5CA0D78F2DD /* Frameworks */,
+				1057E6983F17E886E26D90947CE177B1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BRAlertView;
+			productName = BRAlertView;
+			productReference = AB919078724175867AA060418F318158 /* BRAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -327,7 +349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F65E26F727B879A34D57A955BEC916E /* BRAlertView */,
+				E976801DA8EFA533CB5C75C6B26A6D6E /* BRAlertView */,
 				5D3ED5D00C66BDAF6FF0CB70B91E59C4 /* Pods-BRAlertView_Example */,
 				2CE5E956B39ECC534109318918BEFC63 /* Pods-BRAlertView_Tests */,
 			);
@@ -343,20 +365,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		714269473B0EEDDC5AFD3FE2C38DEFFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0149141C3C5C41E9A9B95448E7AACFB8 /* BRAlertView-dummy.m in Sources */,
-				DF2EFC0E961B2BDD8C1031BAAC618E76 /* ReplaceMe.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		72A6DE42592CD08A82AA42A1DEFCCBBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2A1239366E8FA4A4D1E81428A6B8249D /* Pods-BRAlertView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8988C5A8EB8EE2A85AA1762F3485E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926FCD7FDE58F1B99BB9C2B953DEEB14 /* BRAlertBaseView.m in Sources */,
+				86276383CA2B0FEC1FB7537E2C712851 /* BRAlertView-dummy.m in Sources */,
+				AFFA3B6D4340C3C12D877E5100F80956 /* BRCloseView.m in Sources */,
+				0EAF12DBDDA1DD7DDF34677D56CBF1D3 /* BRTextAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,43 +390,12 @@
 		812E2476A8156213989F8D1E84EDEF9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BRAlertView;
-			target = 3F65E26F727B879A34D57A955BEC916E /* BRAlertView */;
+			target = E976801DA8EFA533CB5C75C6B26A6D6E /* BRAlertView */;
 			targetProxy = 519F4C4BB530F847217184DDEDEFD0A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		11B3D19A5992194A50567B5DFAFBE307 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 733BEE81A85579A66F9ADC666C24C0F3 /* BRAlertView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BRAlertView/BRAlertView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BRAlertView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BRAlertView/BRAlertView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BRAlertView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		3D9AF01AC5FA347883B94190FD10AAD2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D9DB1DBB90F52F488725ACACB20B138 /* Pods-BRAlertView_Tests.release.xcconfig */;
@@ -437,6 +430,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		7492A6922C66EFDD789AED5AC3BEEB7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733BEE81A85579A66F9ADC666C24C0F3 /* BRAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BRAlertView/BRAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BRAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BRAlertView/BRAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BRAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		7BCD23CD8FDF7B082F1A8277E631C4C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -500,37 +524,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_BRAlertView_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8A4433F9B1164AA3B21986F5A332A78F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 733BEE81A85579A66F9ADC666C24C0F3 /* BRAlertView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BRAlertView/BRAlertView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BRAlertView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BRAlertView/BRAlertView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = BRAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -614,6 +607,37 @@
 			};
 			name = Debug;
 		};
+		9CDDAEE26DD4C70DA940E43AD1501DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733BEE81A85579A66F9ADC666C24C0F3 /* BRAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BRAlertView/BRAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BRAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BRAlertView/BRAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BRAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -670,11 +694,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EFDE60CFB4CDC69953AB6B28AAB8FFE /* Build configuration list for PBXNativeTarget "BRAlertView" */ = {
+		742F11C0F208EF314B3293552E8B71AF /* Build configuration list for PBXNativeTarget "BRAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11B3D19A5992194A50567B5DFAFBE307 /* Debug */,
-				8A4433F9B1164AA3B21986F5A332A78F /* Release */,
+				7492A6922C66EFDD789AED5AC3BEEB7E /* Debug */,
+				9CDDAEE26DD4C70DA940E43AD1501DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

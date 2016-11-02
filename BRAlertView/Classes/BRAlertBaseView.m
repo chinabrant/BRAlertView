@@ -135,7 +135,7 @@
         
         for (int i = 0; i < self.buttonTitles.count; i++) {
             
-            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(configration.contentHorizontalPadding + i * (buttonWidth + configration.buttonGap), CGRectGetMaxY(self.centerView.frame) + configration.buttonTopMargin, buttonWidth, configration.buttonHeight)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(configration.contentHorizontalPadding + i * (buttonWidth + configration.buttonGap) + configration.buttonHorizontalMargin, CGRectGetMaxY(self.centerView.frame) + configration.buttonTopMargin, buttonWidth, configration.buttonHeight)];
             [button setTitle:self.buttonTitles[i] forState:UIControlStateNormal];
             button.tag = i;
             [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];

@@ -20,6 +20,11 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6154D5981DC9A852008BEB57 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6154D5941DC9A852008BEB57 /* .gitkeep */; };
+		6154D5991DC9A852008BEB57 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6154D5961DC9A852008BEB57 /* .gitkeep */; };
+		6154D5A21DC9A88E008BEB57 /* BRAlertBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D59C1DC9A88E008BEB57 /* BRAlertBaseView.m */; };
+		6154D5A31DC9A88E008BEB57 /* BRCloseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D59F1DC9A88E008BEB57 /* BRCloseView.m */; };
+		6154D5A41DC9A88E008BEB57 /* BRTextAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6154D5A11DC9A88E008BEB57 /* BRTextAlertView.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A8FDB0E4EED5C18B546366D6 /* Pods_BRAlertView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE1E04320FC94ED7282117F /* Pods_BRAlertView_Example.framework */; };
 		B72D14C61CCE2C267E42AFC3 /* Pods_BRAlertView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E830EC0C8B73DCAE2F0BCFE0 /* Pods_BRAlertView_Tests.framework */; };
@@ -38,7 +43,7 @@
 /* Begin PBXFileReference section */
 		0AE1E04320FC94ED7282117F /* Pods_BRAlertView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRAlertView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8788AB537BB3EE5103A3A6 /* Pods-BRAlertView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRAlertView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRAlertView_Example/Pods-BRAlertView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2B8F22C37208FB587ED21BB1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2B8F22C37208FB587ED21BB1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		52C3E0D452637F513DE5953D /* Pods-BRAlertView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRAlertView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRAlertView_Tests/Pods-BRAlertView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5FAEFB9F1433CB7196536205 /* Pods-BRAlertView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRAlertView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRAlertView_Example/Pods-BRAlertView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BRAlertView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRAlertView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +65,19 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		65500E09C726BA06F9455157 /* BRAlertView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BRAlertView.podspec; path = ../BRAlertView.podspec; sourceTree = "<group>"; };
+		6154D5941DC9A852008BEB57 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		6154D5961DC9A852008BEB57 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		6154D59B1DC9A88E008BEB57 /* BRAlertBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAlertBaseView.h; sourceTree = "<group>"; };
+		6154D59C1DC9A88E008BEB57 /* BRAlertBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAlertBaseView.m; sourceTree = "<group>"; };
+		6154D59D1DC9A88E008BEB57 /* BRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAlertView.h; sourceTree = "<group>"; };
+		6154D59E1DC9A88E008BEB57 /* BRCloseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCloseView.h; sourceTree = "<group>"; };
+		6154D59F1DC9A88E008BEB57 /* BRCloseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCloseView.m; sourceTree = "<group>"; };
+		6154D5A01DC9A88E008BEB57 /* BRTextAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTextAlertView.h; sourceTree = "<group>"; };
+		6154D5A11DC9A88E008BEB57 /* BRTextAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTextAlertView.m; sourceTree = "<group>"; };
+		65500E09C726BA06F9455157 /* BRAlertView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BRAlertView.podspec; path = ../BRAlertView.podspec; sourceTree = "<group>"; };
 		6D5C8AEAA4BB05AD41E25795 /* Pods-BRAlertView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRAlertView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRAlertView_Tests/Pods-BRAlertView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8A16AED38A87C9435ED80B07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8A16AED38A87C9435ED80B07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E830EC0C8B73DCAE2F0BCFE0 /* Pods_BRAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +121,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				6154D5921DC9A852008BEB57 /* BRAlertView */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for BRAlertView */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -191,6 +206,39 @@
 				2B8F22C37208FB587ED21BB1 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		6154D5921DC9A852008BEB57 /* BRAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				6154D5931DC9A852008BEB57 /* Assets */,
+				6154D5951DC9A852008BEB57 /* Classes */,
+			);
+			name = BRAlertView;
+			path = ../BRAlertView;
+			sourceTree = "<group>";
+		};
+		6154D5931DC9A852008BEB57 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6154D5941DC9A852008BEB57 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6154D5951DC9A852008BEB57 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6154D59B1DC9A88E008BEB57 /* BRAlertBaseView.h */,
+				6154D59C1DC9A88E008BEB57 /* BRAlertBaseView.m */,
+				6154D59D1DC9A88E008BEB57 /* BRAlertView.h */,
+				6154D59E1DC9A88E008BEB57 /* BRCloseView.h */,
+				6154D59F1DC9A88E008BEB57 /* BRCloseView.m */,
+				6154D5A01DC9A88E008BEB57 /* BRTextAlertView.h */,
+				6154D5A11DC9A88E008BEB57 /* BRTextAlertView.m */,
+				6154D5961DC9A852008BEB57 /* .gitkeep */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +326,9 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6154D5991DC9A852008BEB57 /* .gitkeep in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				6154D5981DC9A852008BEB57 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		26DD022F0CD96FEA5628663F /* [CP] Copy Pods Resources */ = {
@@ -350,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6718EC049A72D7DCA368A68A /* [CP] Embed Pods Frameworks */ = {
@@ -390,9 +440,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6154D5A21DC9A88E008BEB57 /* BRAlertBaseView.m in Sources */,
 				6003F59E195388D20070C39A /* BRAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6154D5A41DC9A88E008BEB57 /* BRTextAlertView.m in Sources */,
+				6154D5A31DC9A88E008BEB57 /* BRCloseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

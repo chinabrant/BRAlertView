@@ -1,0 +1,6 @@
+framework module BRAlertView {
+  umbrella header "BRAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}

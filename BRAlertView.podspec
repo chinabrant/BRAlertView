@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BRAlertView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of BRAlertView.'
+  s.version          = '0.0.1'
+  s.summary          = 'A high customize text AlertView for iOS.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        可高度定制的 alert view, 目前只支持显示string和attributedString
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/BRAlertView'
+  s.homepage         = 'https://github.com/chinabrant/BRAlertView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'brant' => 'wushujun@stbl.cc' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BRAlertView.git', :tag => s.version.to_s }
+  s.author           = { 'brant' => 'sjwu1234@gmail.com' }
+  s.source           = { :git => 'https://github.com/chinabrant/BRAlertView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'BRAlertView/Classes/**/*'
   

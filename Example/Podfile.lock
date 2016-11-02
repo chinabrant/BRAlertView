@@ -1,0 +1,16 @@
+PODS:
+  - BRAlertView (0.1.0)
+
+DEPENDENCIES:
+  - BRAlertView (from `../`)
+
+EXTERNAL SOURCES:
+  BRAlertView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BRAlertView: cb1689c9b34de1ea44126497e5e7212c3784de6e
+
+PODFILE CHECKSUM: 57d2f8edbd3d2e36606598888beaca335eed09cc
+
+COCOAPODS: 1.1.1

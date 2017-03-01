@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef BRTextConfigration * (^BRTextConfigrationBlock)();
+typedef BRTextConfigration * _Nullable (^BRTextConfigrationBlock)();
 
 @interface BRTextConfigration : BRConfigration
 

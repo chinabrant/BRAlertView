@@ -53,21 +53,18 @@ typedef void(^BRAlertViewActionBlock)(int index);
 
 // 按钮
 @property (nonatomic, strong) UIColor *btnOneTitleColor;
-@property (nonatomic, strong) UIColor *btnOneBackgroundColor;
-@property (nonatomic, strong) UIColor *btnOneBorderColor;       // default #a6a6a6
 @property (nonatomic, strong) UIFont  *btnOneFont;
 
 @property (nonatomic, strong) UIColor *btnTwoTitleColor;
-@property (nonatomic, strong) UIColor *btnTwoBackgroundColor;   // default #ff6c6c
-@property (nonatomic, strong) UIColor *btnTwoBorderColor;
 @property (nonatomic, strong) UIFont  *btnTwoFont;
 
 @property (nonatomic, strong) UIColor *btnThreeTitleColor;
-@property (nonatomic, strong) UIColor *btnThreeBackgroundColor;
-@property (nonatomic, strong) UIColor *btnThreeBorderColor;
 @property (nonatomic, strong) UIFont  *btnThreeFont;
 
 @property (nonatomic) CGFloat buttonHeight;                 // button height, default is 35
+
+@property (nonatomic) CGFloat bottomHeight;             // default is 45
+@property (nonatomic, strong) UIColor *bottomLineColor; // default is 0xe0e0e0
 
 @end
 
@@ -85,6 +82,8 @@ typedef void(^BRAlertViewActionBlock)(int index);
 @property (nonatomic, copy) NSArray *buttonTitles;
 
 @property (nonatomic, copy) BRAlertViewActionBlock actionBlock;
+
+- (instancetype)initWithAttachView:(UIView *)view;
 
 - (void)configrationViews:(BRConfigration *)configration;
 

@@ -8,7 +8,10 @@
 
 #import "BRTextAlertTableViewController.h"
 #import "BRTextAlertView.h"
+#import "BRCopyShareAlertView.h"
+#import "BRImageTextAlertView.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface BRTextAlertTableViewController ()
 
 @end
@@ -41,53 +44,35 @@
     
     switch (indexPath.row) {
         case 0: {
-            [BRTextAlertView showMessage:@"Tap outside can't dismiss" buttonTitles:@[@"Cancel"] configrationBlock:^BRTextConfigration * _Nullable{
-                BRTextConfigration *configration = [BRTextConfigration new];
-                configration.tapOutsideDismiss = NO;
-                return configration;
+            
+            [BRTextAlertView showInView:self.view message:@"Tap outside can't dismiss" buttonTitles:@[@"Cancel"] configrationBlock:^BRTextConfigration *{
+                BRTextConfigration *conf = [BRTextConfigration new];
+                conf.tapOutsideDismiss = NO;
+                return conf;
             } actionBlock:^(int index) {
                 
             }];
+            
             break;
         }
+            
         case 1: {
-            [BRTextAlertView showMessage:@"Tap outside dismiss" buttonTitles:@[@"Cancel", @"Confirm"] configrationBlock:^BRTextConfigration * _Nullable{
-                BRTextConfigration *configration = [BRTextConfigration new];
-                
-                return configration;
+            [BRTextAlertView showInView:self.view message:@"Tap outside dismiss" buttonTitles:@[@"Cancel", @"Confirm"] configrationBlock:^BRTextConfigration *{
+                BRTextConfigration *conf = [BRTextConfigration new];
+                return conf;
             } actionBlock:^(int index) {
                 
             }];
             break;
         }
         case 2: {
-            [BRTextAlertView showMessage:@"Tap outside dismiss" buttonTitles:@[@"Cancel", @"Confirm"] configrationBlock:^BRTextConfigration * _Nullable{
-                BRTextConfigration *configration = [BRTextConfigration new];
-                NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"This is an AttributedString,Configration contain attributedString,the message parameter will invalid!"];
-                [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(4, 16)];
-                NSRange range = [[attrString string] rangeOfString:@"invalid"];
-                [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:17] range:range];
-                [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
-                configration.attributedString = attrString;
-                
-                return configration;
-            } actionBlock:^(int index) {
+            [BRCopyShareAlertView showInView:self.view message:@"仿淘宝天猫的复制粘贴分享" actionBlock:^(int index) {
                 
             }];
             break;
         }
         case 3: {
-            [BRTextAlertView showMessage:@"customize button" buttonTitles:@[@"Cancel"] configrationBlock:^BRTextConfigration * _Nullable{
-                BRTextConfigration *configration = [BRTextConfigration new];
-                configration.tapOutsideDismiss = NO;
-                
-                configration.buttonHorizontalMargin = 30;
-                configration.buttonHeight = 35;
-                configration.btnOneBackgroundColor = [UIColor orangeColor];
-                configration.btnOneTitleColor = [UIColor purpleColor];
-                
-                return configration;
-            } actionBlock:^(int index) {
+            [BRImageTextAlertView showInView:self.view message:@"这个信息可以多行的，这个alertview可以高度定制，子类化也比较简单" image:[UIImage imageNamed:@"timg"] actionBlock:^(int index) {
                 
             }];
             break;
@@ -99,3 +84,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

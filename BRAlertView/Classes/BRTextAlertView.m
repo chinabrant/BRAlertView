@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation BRTextAlertView
 
-- (instancetype)init {
-    self = [super init];
+- (instancetype)initWithAttachView:(UIView *)view {
+    self = [super initWithAttachView:view];
     if (self) {
         [self.centerView addSubview:self.contentLabel];
     }
@@ -32,29 +32,31 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
-+ (BRTextAlertView *)showMessage:(NSString *)message buttonTitles:(NSArray * _Nullable)buttonTitles configrationBlock:(_Nullable BRTextConfigrationBlock)configrationBlock actionBlock:(_Nullable BRAlertViewActionBlock)actionBlock {
++ (BRTextAlertView *)showInView:(UIView *)view message:(NSString *)message buttonTitles:(NSArray *)buttonTitles configrationBlock:(BRTextConfigrationBlock _Nullable)configrationBlock actionBlock:(BRAlertViewActionBlock)actionBlock {
     NSAssert(buttonTitles.count <= 3, @"button count can't more than three");
     
-    BRTextAlertView *alertView = [[BRTextAlertView alloc] init];
+    BRTextAlertView *alertView = [[BRTextAlertView alloc] initWithAttachView:view];
     alertView.message = message;
     alertView.buttonTitles = buttonTitles;
-//    alertView.contentLabel.text = message;
     alertView.actionBlock = actionBlock;
     
     if (configrationBlock) {
-        
-        BRTextConfigration *configration = configrationBlock() ? configrationBlock() : [BRTextConfigration new];
-        
-        [alertView configViews:configration];
+        [alertView configViews:configrationBlock()];
     }
     else {
-        
         [alertView configViews:[BRTextConfigration new]];
     }
+    
     
     [alertView show];
     
     return alertView;
+}
+
++ (BRTextAlertView *)showInView:(UIView *)view message:(NSString *)message buttonTitles:(NSArray *)buttonTitles actionBlock:(BRAlertViewActionBlock)actionBlock {
+    return [BRTextAlertView showInView:view message:message buttonTitles:buttonTitles configrationBlock:^BRTextConfigration * {
+        return [BRTextConfigration new];
+    } actionBlock:actionBlock];
 }
 
 
@@ -88,10 +90,10 @@ NS_ASSUME_NONNULL_BEGIN
     
     self.centerView.frame = CGRectMake(configration.contentHorizontalPadding,
                                        y,
-                                       self.contentView.frame.size.width - 2 * configration.contentHorizontalPadding,
+                                       self.frame.size.width - 2 * configration.contentHorizontalPadding - 2 * configration.contentHorizontalMargin,
                                        hei);
     
-    self.contentLabel.frame = CGRectMake(0, 0, self.contentView.frame.size.width - 2 * configration.contentHorizontalPadding, hei);
+    self.contentLabel.frame = CGRectMake(0, 0, self.centerView.frame.size.width, hei);
     
     [super configrationViews:configration];
 }
@@ -115,22 +117,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation BRTextConfigration
 
-//+ (instancetype)defaultTextConfigration {
-//    static BRTextConfigration *configration = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        configration = [[BRTextConfigration alloc] initDefault];
-//    });
-//    
-//    return configration;
-//}
-
 - (instancetype)init {
     self = [super init];
     if (self) {
         // default value
-        _contentColor = [UIColor blackColor];
-        _contentFont = [UIFont systemFontOfSize:16];
+        _contentColor = [UIColor colorWithRed:0x22/255.0 green:0x22/255.0 blue:0x22/255.0 alpha:1];
+        _contentFont = [UIFont systemFontOfSize:12];
         _attributedString = nil;
     }
     

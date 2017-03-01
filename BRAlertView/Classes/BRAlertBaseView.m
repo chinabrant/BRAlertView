@@ -26,10 +26,10 @@
         _tapOutsideDismiss = YES;
         
         // default value
-        _contentHorizontalMargin = 30;
+        _contentHorizontalMargin = 59;
         _contentHorizontalPadding = 15;
-        _contentTopPadding = 25;
-        _contentBottomPadding = 20;
+        _contentTopPadding = 15;
+        _contentBottomPadding = 15;
         _contentTopOffset = 0;
         _title = nil;
         
@@ -37,22 +37,20 @@
         _buttonTopMargin = 20;
         _buttonHorizontalMargin = 0;
         
-        _btnOneTitleColor = [UIColor grayColor];
-        _btnOneBackgroundColor = [UIColor whiteColor];
-        _btnOneBorderColor = [UIColor colorWithRed:0xa6/255.0 green:0xa6/255.0 blue:0xa6/255.0 alpha:1];
-        _btnOneFont = [UIFont systemFontOfSize:16];
+        _btnOneTitleColor = [UIColor colorWithRed:0x22/255.0 green:0x22/255.0 blue:0x22/255.0 alpha:1];
+        _btnOneFont = [UIFont systemFontOfSize:12];
         
-        _btnTwoFont = [UIFont systemFontOfSize:16];
-        _btnTwoBackgroundColor = [UIColor colorWithRed:0xff/255.0 green:0x6c/255.0 blue:0x6c/255.0 alpha:1];
-        _btnTwoTitleColor = [UIColor whiteColor];
-        _btnTwoBorderColor = [UIColor colorWithRed:0xff/255.0 green:0x6c/255.0 blue:0x6c/255.0 alpha:1];
+        _btnTwoFont = [UIFont systemFontOfSize:12];
+        _btnTwoTitleColor = [UIColor colorWithRed:0x1e/255.0 green:0xea/255.0 blue:0x70/255.0 alpha:1];
+        
         
         _btnThreeTitleColor = [UIColor blackColor];
-        _btnThreeBackgroundColor = [UIColor whiteColor];
-        _btnThreeBorderColor = [UIColor lightGrayColor];
-        _btnThreeFont = [UIFont systemFontOfSize:16];
+        _btnThreeFont = [UIFont systemFontOfSize:12];
         
         _buttonHeight = 41;
+        
+        _bottomHeight = 40;
+        _bottomLineColor = [UIColor colorWithRed:0xe0/255.0 green:0xe0/255.0 blue:0xe0/255.0 alpha:1];
     }
     
     return self;
@@ -69,6 +67,12 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIView *line;
 
+@property (nonatomic, strong) UIView *bottomView;
+
+@property (nonatomic, strong) UIView *bottomLine;
+
+@property (nonatomic, strong) UIView *attachView;
+
 @end
 
 @implementation BRAlertBaseView
@@ -76,6 +80,8 @@
 - (instancetype)init {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
+        
+        
         [self addSubview:self.contentView];
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         self.contentView.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0, self.frame.size.height / 2.0);
@@ -86,7 +92,30 @@
         
         [self.contentView addSubview:self.line];
         
-//        [self.contentView addSubview:self.closeView];
+        [self.contentView addSubview:self.bottomView];
+        [self.bottomView addSubview:self.bottomLine];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithAttachView:(UIView *)view {
+    self = [super initWithFrame:view.bounds];
+    if (self) {
+        _attachView = view;
+        
+        [self addSubview:self.contentView];
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        self.contentView.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0, self.frame.size.height / 2.0);
+        
+        [self.contentView addSubview:self.titleLabel];
+        
+        [self.contentView addSubview:self.centerView];
+        
+        [self.contentView addSubview:self.line];
+        
+        [self.contentView addSubview:self.bottomView];
+        [self.bottomView addSubview:self.bottomLine];
     }
     
     return self;
@@ -106,6 +135,9 @@
 
 - (void)configrationViews:(BRConfigration *)configration {
     _configration = configration;
+    
+    self.bottomView.frame = CGRectMake(0, CGRectGetMaxY(self.centerView.frame) + configration.contentBottomPadding, self.frame.size.width - 2 * configration.contentHorizontalMargin, self.configration.bottomHeight);
+    self.bottomLine.frame = CGRectMake(0, 0, self.bottomView.frame.size.width, 0.5);
     
     self.backgroundColor = configration.backgroundColor;
     
@@ -130,24 +162,43 @@
     
     if (self.buttonTitles.count > 0) {
         // button height
-        CGFloat buttonWidth = (self.frame.size.width - configration.contentHorizontalMargin * 2 - configration.contentHorizontalPadding * 2 - (self.buttonTitles.count - 1) * configration.buttonGap) / self.buttonTitles.count - 2 * configration.buttonHorizontalMargin;
-        
+        CGFloat buttonWidth = self.bottomView.frame.size.width / self.buttonTitles.count;
+        self.bottomView.hidden = NO;
         
         for (int i = 0; i < self.buttonTitles.count; i++) {
             
-            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(configration.contentHorizontalPadding + i * (buttonWidth + configration.buttonGap) + configration.buttonHorizontalMargin, CGRectGetMaxY(self.centerView.frame) + configration.buttonTopMargin, buttonWidth, configration.buttonHeight)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i * buttonWidth, 0.5, buttonWidth, configration.bottomHeight - 0.5)];
             [button setTitle:self.buttonTitles[i] forState:UIControlStateNormal];
             button.tag = i;
             [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-            [self.contentView addSubview:button];
+            [self.bottomView addSubview:button];
             
             [self configButton:button index:i];
         }
+        
+        if (self.buttonTitles.count > 1) {
+            if (self.buttonTitles.count == 2) {
+                UIView *line = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, 15, 0.5, self.configration.bottomHeight - 30)];
+                line.backgroundColor = self.configration.bottomLineColor;
+                [self.bottomView addSubview:line];
+            } else if (self.buttonTitles.count == 3) {
+                UIView *line1 = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, 15, 0.5, self.configration.bottomHeight - 30)];
+                line1.backgroundColor = self.configration.bottomLineColor;
+                [self.bottomView addSubview:line1];
+                
+                UIView *line2 = [[UIView alloc] initWithFrame:CGRectMake(2 * buttonWidth, 15, 0.5, self.configration.bottomHeight - 30)];
+                line2.backgroundColor = self.configration.bottomLineColor;
+                [self.bottomView addSubview:line2];
+            }
+        }
+    }
+    else {
+        self.bottomView.hidden = YES;
     }
     
     CGFloat hei = CGRectGetMaxY(self.centerView.frame) + configration.contentBottomPadding;
     if (self.buttonTitles.count > 0) {
-        hei += configration.buttonTopMargin + configration.buttonHeight;
+        hei += configration.buttonHeight;
     }
     
     self.contentView.frame = CGRectMake(configration.contentHorizontalMargin, 0, self.frame.size.width - 2 * configration.contentHorizontalMargin, hei);
@@ -163,26 +214,17 @@
 }
 
 - (void)configButton:(UIButton *)button index:(int)index {
-    button.layer.borderWidth = 0.5;
-    button.layer.cornerRadius = 4.0f;
-    button.layer.masksToBounds = YES;
     
     if (index == 0) {
         [button setTitleColor:self.configration.btnOneTitleColor forState:UIControlStateNormal];
-        button.backgroundColor = self.configration.btnOneBackgroundColor;
-        button.layer.borderColor = self.configration.btnOneBorderColor.CGColor;
         button.titleLabel.font = self.configration.btnOneFont;
     }
     else if (index == 1) {
         [button setTitleColor:self.configration.btnTwoTitleColor forState:UIControlStateNormal];
-        button.backgroundColor = self.configration.btnTwoBackgroundColor;
-        button.layer.borderColor = self.configration.btnTwoBorderColor.CGColor;
         button.titleLabel.font = self.configration.btnTwoFont;
     }
     else if (index == 2) {
         [button setTitleColor:self.configration.btnThreeTitleColor forState:UIControlStateNormal];
-        button.backgroundColor = self.configration.btnThreeBackgroundColor;
-        button.layer.borderColor = self.configration.btnThreeBorderColor.CGColor;
         button.titleLabel.font = self.configration.btnThreeFont;
     }
 }
@@ -238,6 +280,23 @@
     return _centerView;
 }
 
+- (UIView *)bottomLine {
+    if (!_bottomLine) {
+        _bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, 0.5)];
+        _bottomLine.backgroundColor = [UIColor colorWithRed:0xe0/255.0 green:0xe0/255.0 blue:0xe0/255.0 alpha:1];
+    }
+    
+    return _bottomLine;
+}
+
+- (UIView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[UIView alloc] init];
+    }
+    
+    return _bottomView;
+}
+
 # pragma mark - show / dismiss
 
 - (void)showAnimation {
@@ -256,10 +315,16 @@
 }
 
 - (void)show {
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window addSubview:self];
+//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//    [window addSubview:self];
+//
+    [self.attachView addSubview:self];
     
     [self showAnimation];
+}
+
+- (void)showInView:(UIView *)view {
+    
 }
 
 - (void)dismiss {

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef BRTextConfigration * _Nullable  (^BRTextConfigrationBlock)();
+typedef BRTextConfigration * (^BRTextConfigrationBlock)();
 
 @interface BRTextConfigration : BRConfigration
 
@@ -24,7 +24,9 @@ typedef BRTextConfigration * _Nullable  (^BRTextConfigrationBlock)();
 
 @interface BRTextAlertView : BRAlertBaseView
 
-+ (BRTextAlertView *)showMessage:(NSString *)message buttonTitles:(NSArray * _Nullable)buttonTitles configrationBlock:(_Nullable BRTextConfigrationBlock)configrationBlock actionBlock:(_Nullable BRAlertViewActionBlock)actionBlock;
++ (BRTextAlertView *)showInView:(UIView *)view message:(NSString *)message buttonTitles:(NSArray *)buttonTitles actionBlock:(BRAlertViewActionBlock)actionBlock;
+
++ (BRTextAlertView *)showInView:(UIView *)view message:(NSString *)message buttonTitles:(NSArray *)buttonTitles configrationBlock:(BRTextConfigrationBlock _Nullable)config actionBlock:(BRAlertViewActionBlock)actionBlock;
 
 @end
 

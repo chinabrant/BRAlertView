@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BRAlertView'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'A high customize text AlertView for iOS.'
 
   s.description      = <<-DESC
